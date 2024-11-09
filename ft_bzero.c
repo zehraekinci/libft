@@ -6,8 +6,13 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:45:34 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/10/26 09:45:34 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/09 04:53:28 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}

@@ -6,8 +6,13 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:45:48 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/10/26 09:45:48 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/09 04:56:43 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isascii(int i)
+{
+	return (i >= 0 && i <= 127);
+}

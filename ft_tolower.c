@@ -6,8 +6,15 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:46:35 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/10/26 09:46:35 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/09 05:03:36 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_tolower(int i)
+{
+	if (i >= 'A' && i <= 'Z')
+		return (i + 32);
+	return (i);
+}

@@ -6,20 +6,13 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:45:45 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/10/29 12:03:16 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/09 05:16:02 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
-
 int ft_isalpha(int c)
 {
     return((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
-
-// int main()
-// {
-//     printf("%d\n", ft_isalpha('a'));
-// }

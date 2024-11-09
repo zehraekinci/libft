@@ -6,20 +6,13 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:45:51 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/10/29 12:04:00 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/09 04:56:59 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
-
 int ft_isdigit(int c)
 {
     return(c >= '0' && c <= '9');
 }
-
-// int main()
-// {
-//     printf("%d\n", ft_isdigit('a'));
-// }

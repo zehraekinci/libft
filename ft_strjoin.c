@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 09:46:11 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 05:00:18 by zeekinci         ###   ########.fr       */
+/*   Created: 2024/11/09 05:18:54 by zeekinci          #+#    #+#             */
+/*   Updated: 2024/11/09 05:18:56 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int i)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	while (*s)
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	j = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		if (*s == i)
-			return ((char *)s);
-		s++;
+		str[i] = s1[i];
+		i++;
 	}
-	if (i == '\0')
-		return ((char *)s);
-	return (0);
+	while (s2[j] != '\0')
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
 }
