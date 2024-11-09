@@ -6,7 +6,7 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:40:07 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 04:53:09 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/09 19:41:56 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,33 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	neg;
-	int	res;
+	int		sign;
+	long	num;
 
-	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	sign = 1;
+	num = 0;
+
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' || *str == '\f' || *str == '\r')
+		str++;
+
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+
+	while (*str >= '0' && *str <= '9')
 	{
-		res = (str[i] - '0') + (res * 10);
-		i++;
+		num = num * 10 + (*str - '0');
+		str++;
 	}
-	return (res * neg);
+	return (int)(sign * num);
+}
+
+#include <stdio.h>
+
+int main()
+{
+    printf("%d\n", ft_atoi("  -1235"));
 }
