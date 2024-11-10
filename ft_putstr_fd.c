@@ -6,7 +6,7 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 05:18:13 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 05:18:14 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:47:33 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,21 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+    if (!s)
+        return;
+    while (*s)
+    {
+        write(fd, s, 1);
+        s++;
+    }
 }
+
+// #include <unistd.h>
+
+// int main(void)
+// {
+//     char str[] = "Hello, world!";
+//     ft_putstr_fd(str, 1);
+//     write(1, "\n", 1);
+//     return 0;
+// }

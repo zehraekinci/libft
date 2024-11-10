@@ -6,7 +6,7 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 05:17:41 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 20:42:31 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:45:05 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,31 +54,31 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main(void)
-{
-    int numbers[] = {123, -456, 0, 7890, -2147483648, 42};
-    size_t i = 0;
-    char *str;
+// int main(void)
+// {
+//     int numbers[] = {123, -456, 0, 7890, -2147483648, 42};
+//     size_t i = 0;
+//     char *str;
 
-    printf("Sayıların karakter dizisine dönüştürülmesi:\n");
+//     printf("Sayıların karakter dizisine dönüştürülmesi:\n");
 
-    while (i < sizeof(numbers) / sizeof(numbers[0]))
-    {
-        str = ft_itoa(numbers[i]);
-        if (str)
-        {
-            printf("%d -> \"%s\"\n", numbers[i], str);
-            free(str);
-        }
-        else
-        {
-            printf("%d -> Dönüştürme başarısız\n", numbers[i]);
-        }
-        i++;
-    }
+//     while (i < sizeof(numbers) / sizeof(numbers[0]))
+//     {
+//         str = ft_itoa(numbers[i]);
+//         if (str)
+//         {
+//             printf("%d -> \"%s\"\n", numbers[i], str);
+//             free(str);
+//         }
+//         else
+//         {
+//             printf("%d -> Dönüştürme başarısız\n", numbers[i]);
+//         }
+//         i++;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }

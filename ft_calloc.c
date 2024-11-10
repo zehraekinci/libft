@@ -6,7 +6,7 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:50:18 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 20:04:19 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:44:19 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,30 +33,30 @@ void	*ft_calloc(size_t count, size_t size)
     return (void *)ptr;
 }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main(void)
-{
-    int *arr;
-    size_t n = 2;
+// int main(void)
+// {
+//     int *arr;
+//     size_t n = 2;
     
-    arr = (int *)ft_calloc(n, sizeof(int));
-    if (!arr)
-    {
-        printf("Bellek tahsis edilemedi!\n");
-        return 1;
-    }
+//     arr = (int *)ft_calloc(n, sizeof(int));
+//     if (!arr)
+//     {
+//         printf("Bellek tahsis edilemedi!\n");
+//         return 1;
+//     }
 
-    printf("ft_calloc ile ayrılan bellek değerleri:\n");
-    size_t i = 0;
-    while (i < n)
-    {
-        printf("arr[%zu] = %d\n", i, arr[i]);
-        i++;
-    }
+//     printf("ft_calloc ile ayrılan bellek değerleri:\n");
+//     size_t i = 0;
+//     while (i < n)
+//     {
+//         printf("arr[%zu] = %d\n", i, arr[i]);
+//         i++;
+//     }
 
-    free(arr);
+//     free(arr);
 
-    return 0;
-}
+//     return 0;
+// }

@@ -6,7 +6,7 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 05:19:09 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 05:19:10 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:45:49 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (str);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int	main(void)
+// {
+// 	char const	*str = "   Hello, world!   ";
+// 	char const	*set = " ";
+// 	char		*trimmed;
+
+// 	trimmed = ft_strtrim(str, set);
+// 	if (trimmed != NULL)
+// 	{
+// 		printf("Trimmed string: '%s'\n", trimmed);
+// 		free(trimmed);
+// 	}
+// 	else
+// 		printf("Trimming failed\n");
+// 	return (0);
+// }

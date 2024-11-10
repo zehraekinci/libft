@@ -6,7 +6,7 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:46:13 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 05:01:08 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:47:05 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,50 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		i;
-	int		j;
-	char	*str;
+    int len;
+    char *dup;
+    int i;
 
-	i = 0;
-	j = ft_strlen(s);
-	str = (char *)malloc(sizeof(*str) * (j + 1));
-	while (i < j)
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+    len = 0;
+    while (s[len])
+        len++;
+
+    dup = (char *)malloc((len + 1) * sizeof(char));
+    if (!dup)
+        return NULL;
+
+    i = 0;
+    while (i <= len)
+    {
+        dup[i] = s[i];
+        i++;
+    }
+    return dup;
 }
+
+// #include <stdlib.h>
+// #include <unistd.h>
+
+// int main(void)
+// {
+//     const char str[] = "Hello, world!";
+//     char *dup_str;
+//     int len;
+
+//     len = 0;
+//     while (str[len])
+//         len++;
+
+//     dup_str = ft_strdup(str);
+//     if (dup_str)
+//     {
+//         write(1, dup_str, len);
+//         free(dup_str);
+//     }
+//     else
+//     {
+//         write(1, "Memory allocation failed\n", 25);
+//     }
+
+//     return 0;
+// }

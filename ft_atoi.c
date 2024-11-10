@@ -6,7 +6,7 @@
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:40:07 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/09 19:41:56 by zeekinci         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:44:05 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int	ft_atoi(const char *str)
 	return (int)(sign * num);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    printf("%d\n", ft_atoi("  -1235"));
-}
+// int main()
+// {
+//     printf("%d\n", ft_atoi("  -1235"));
+// }

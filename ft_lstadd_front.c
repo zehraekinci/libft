@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 09:46:24 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/10 19:46:17 by zeekinci         ###   ########.fr       */
+/*   Created: 2024/11/10 20:27:21 by zeekinci          #+#    #+#             */
+/*   Updated: 2024/11/10 20:41:50 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	if (new == NULL)
+		return;
+	new->next = *lst;
+	*lst = new;
 }
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// int	main(void)
-// {
-// 	char const	*str = "Hello world!";
-// 	int			len;
-
-// 	len = ft_strlen(str);
-// 	printf("Length: %d\n", len);
-// 	return (0);
-// }
+int main(void)
+{
+    t_list *node1 = ft_lstnew("Second");
+    t_list *node2 = ft_lstnew("First");
+    ft_lstadd_front(&node1, node2);
+    t_list *current = node2;
+    while (current)
+    {
+        printf("Content: %s\n", (char *)current->content);
+        current = current->next;
+    }
+    return (0);
+}

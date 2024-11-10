@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zeekinci <zeekinci@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 09:46:24 by zeekinci          #+#    #+#             */
-/*   Updated: 2024/11/10 19:46:17 by zeekinci         ###   ########.fr       */
+/*   Created: 2024/11/10 20:03:26 by zeekinci          #+#    #+#             */
+/*   Updated: 2024/11/10 20:06:32 by zeekinci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstnew(void *content)
 {
-	int len;
+	t_list	*new_node;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
 
 // #include <stdio.h>
 
-// int	main(void)
+// int main(void)
 // {
-// 	char const	*str = "Hello world!";
-// 	int			len;
-
-// 	len = ft_strlen(str);
-// 	printf("Length: %d\n", len);
-// 	return (0);
+//     t_list *node = ft_lstnew("Hello, World!");
+//     if (node)
+//     {
+//         printf("Content: %s\n", (char *)node->content);
+//         free(node);
+//     }
+//     return (0);
 // }
